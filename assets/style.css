@@ -1,28 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&family=Instrument+Serif:ital@0;1&family=Unica+One&display=swap');
+
 :root {
     --color: darkgray;
     --font-size: 24px;
     --gutter: calc(var(--font-size) * 2);
+    --font-display: "Instrument Serif";
 }
 
 @media (min-width: 600px) {
     :root {
         --font-size: 32px;
     }
+
+    h1 {
+        font-size: 96px;
+    }
+}
+
+em {
+    font-style: italic;
 }
 
 body {
-    font-family: sans-serif;
+    font-family: "Azeret Mono";
     font-size: var(--font-size);
-    padding-left: var(--gutter);
-    padding-right: var(--gutter);
+    padding-left: 10%;
+    padding-right: 10%;
     padding-top: calc(var(--gutter) * 1.5);
+    padding-bottom: 32px;
     display: flex;
     flex-direction: column;
     row-gap: var(--gutter);
+    background-color: #0047FF;
+    color: white;
+    align-items: space-between;
+    max-height: 100vh;
+}
+
+main ol {
+    display: flex;
+    flex-direction: column;
+    gap: 8px
 }
 
 h1 {
-    font-size: calc(var(--font-size) *2);
+    font-size: 96px;
+    font-family: var(--font-display);
 }
 
 a:link {
@@ -31,7 +54,7 @@ a:link {
 } 
 
 a:hover {
-    opacity: 50%;
+    color: #B13A91;
 }
 
 footer {
@@ -45,5 +68,5 @@ footer {
 footer ul {
     display: flex;
     flex-direction: row;
-    gap: 5%;
+    gap: 32px;
 }
