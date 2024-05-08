@@ -7,16 +7,6 @@
     --font-display: "Instrument Serif";
 }
 
-@media (min-width: 600px) {
-    :root {
-        --font-size: 32px;
-    }
-
-    h1 {
-        font-size: 96px;
-    }
-}
-
 em {
     font-style: italic;
 }
@@ -41,6 +31,27 @@ main ol {
     display: flex;
     flex-direction: column;
     gap: 8px
+}
+
+h1 {
+    animation: load 0.5s linear;
+}
+
+ol li {
+    animation: load 3s linear;
+}
+
+footer {
+    animation: load 5s linear;
+}
+
+@keyframes load {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 h1 {
@@ -69,4 +80,20 @@ footer ul {
     display: flex;
     flex-direction: row;
     gap: 32px;
+}
+
+@media (max-width: 720px) {
+    footer {
+        font-size: 40px;
+    }
+}
+
+@media (min-width: 720px) {
+    :root {
+        --font-size: 32px;
+    }
+
+    h1 {
+        font-size: 96px;
+    }
 }
